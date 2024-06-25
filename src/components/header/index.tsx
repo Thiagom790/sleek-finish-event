@@ -91,7 +91,7 @@ export default function Header() {
   return (
     <Container>
       <div className="overlay"></div>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source
           src={heroVideoDesktop}
           type="video/mp4"
