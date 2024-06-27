@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import tutorImg from "../../assets/tutor.png";
 import { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
@@ -17,13 +16,16 @@ const ImageContainer = styled.div`
   }
 `;
 
+const tutorSrc =
+  "https://thiagom790.github.io/sleek-finish-event-assets/images/tutor.png";
+
 export default function TutorImage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const img = new Image();
-    img.src = tutorImg;
     img.onload = () => setIsLoading(false);
+    img.src = tutorSrc;
   }, []);
 
   return (
@@ -41,7 +43,7 @@ export default function TutorImage() {
         />
       </div>
       <img
-        src={tutorImg}
+        src={tutorSrc}
         alt="Professora Samyra"
         style={{ display: isLoading ? "none" : "block" }}
       />

@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import heroVideoDesktop from "../../assets/hero-desktop.mov";
-import heroVideoMobile from "../../assets/hero-mobile.mov";
 import { useEffect, useRef, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
@@ -53,12 +51,12 @@ export default function HeroVideo() {
         style={{ display: isLoading ? "none" : "block" }}
       >
         <source
-          src={heroVideoDesktop}
+          src="https://thiagom790.github.io/sleek-finish-event-assets/videos/hero-desktop.mov"
           type="video/mp4"
           media="only screen and (min-width: 600px)"
         />
         <source
-          src={heroVideoMobile}
+          src="https://thiagom790.github.io/sleek-finish-event-assets/videos/hero-mobile.mov"
           type="video/mp4"
           media="only screen and (max-width: 600px)"
         />
