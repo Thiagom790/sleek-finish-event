@@ -42,7 +42,8 @@ const Content = styled.div`
     color: ${(props) => props.theme.colors.white};
     text-align: center;
     line-height: 1.5;
-    font-family: FashionFetishBold, system-ui, sans-serif;
+    font-family: "Fashion Fetish", system-ui, sans-serif;
+    font-weight: bold;
   }
 
   p {

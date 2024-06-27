@@ -26,7 +26,8 @@ const TextContainer = styled.div`
 
   h2 {
     font-size: 2rem;
-    font-family: FashionFetishBold, system-ui, sans-serif;
+    font-family: "Fashion Fetish", system-ui, sans-serif;
+    font-weight: bold;
     line-height: 1.5;
     margin-bottom: 4rem;
   }

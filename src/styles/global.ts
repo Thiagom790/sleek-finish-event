@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components";
-import FashionFetishBold from "../fonts/fashion-fetish-bold.ttf";
+import FashionFetishBoldWoff from "../fonts/fashion-fetish-bold.woff";
+import FashionFetishBoldWoff2 from "../fonts/fashion-fetish-bold.woff2";
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
-    font-family: FashionFetishBold;
-    src: url(${FashionFetishBold});
+    font-family: 'Fashion Fetish';
+    font-display: swap;
+    font-weight: bold;
+    src: local('Fashion Fetish'), 
+        url(${FashionFetishBoldWoff2}) format('woff2'), 
+        url(${FashionFetishBoldWoff}) format('woff');
 }
 
 * {
