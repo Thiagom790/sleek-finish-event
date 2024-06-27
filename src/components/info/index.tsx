@@ -32,9 +32,10 @@ const TextContainer = styled.div`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: "Urbanist", sans-serif;
     line-height: 1.5;
+    font-weight: bold;
 
     &:not(:last-child) {
       margin-bottom: 1rem;
@@ -54,23 +55,16 @@ export default function Info() {
     <Container>
       <div className="content">
         <TextContainer>
-          <h2>Aprenda de forma fácil e simples como aplicar Lace Wig</h2>
           <p>
-            Se prepare para o maior evento de aplicação de Lace Wig que você já
-            participou.
+            Se o que te impede de usar Lace Wig é o acabamento, seja colada ou
+            não. Agora isso acabou!
           </p>
           <p>
-            Se o que te impedia de usar lace era acabamento, seja colada ou sem
-            colar, agora não será mais.
+            Se prepare para o maior evento de Lace Wig que você já participou.
           </p>
           <p>
-            E não acaba por aí, você vai aprender comigo a dar acabamento nos
-            seus penteados, deixando eles bem alinhados.
-          </p>
-          <p>
-            E olha só, eu ainda criei um grupo no WhatsApp para não correr o
-            risco de você perder o evento Sleek Finish, um evento gratuito e
-            100% online.
+            Você vai aprender comigo a dar acabamento na sua Lace Wig nos seus
+            penteados, deixando um acabamento elegante e os fios bem alinhados!
           </p>
         </TextContainer>
         <ImageContainer>

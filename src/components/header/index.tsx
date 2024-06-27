@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import heroVideoDesktop from "../../assets/hero-desktop.mp4";
-import heroVideoMobile from "../../assets/hero-mobile.mp4";
-import { SubscribeDialog } from "./subscribe-dialog";
-import * as Dialog from "@radix-ui/react-dialog";
+import heroVideoDesktop from "../../assets/hero-desktop.mov";
+import heroVideoMobile from "../../assets/hero-mobile.mov";
 
 const Container = styled.header`
   width: min(100%, ${(props) => props.theme.devices.extra_large_screen});
@@ -48,10 +46,16 @@ const Content = styled.div`
   }
 
   p {
+    text-align: center;
     margin-bottom: 2rem;
     color: ${(props) => props.theme.colors.white};
     font-family: "Urbanist", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    @media (max-width: ${(props) => props.theme.devices.small_screen}) {
+      text-align: left;
+    }
   }
 
   & .overlay {
@@ -65,7 +69,7 @@ const Content = styled.div`
   }
 `;
 
-const Button = styled.button`
+const Link = styled.a`
   align-self: stretch;
   font-family: "Urbanist", sans-serif;
   font-weight: bold;
@@ -76,10 +80,12 @@ const Button = styled.button`
   border-radius: ${(props) => props.theme.radius.default};
   text-transform: uppercase;
   cursor: pointer;
-  background-color: #f56f01;
+  background-color: #07b21a;
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
-    background-color: #fca311;
+    background-color: #098117;
     color: ${(props) => props.theme.colors.white};
     transition: 0.3s;
   }
@@ -112,13 +118,13 @@ export default function Header() {
           ) : (
             <h1>Evento Sleek Finish</h1>
           )}
-          <p>Se inscreva para o evento Lace Wig com acabamento elevante</p>
-          <Dialog.Root>
-            <Dialog.Trigger asChild>
-              <Button>Quero participar</Button>
-            </Dialog.Trigger>
-            <SubscribeDialog />
-          </Dialog.Root>
+          <p>
+            Se inscreva para o Evento Sleek Finish, {!isMobile ? <br /> : ""} e
+            aprenda a deixar um acabamento perfeito na sua Lace Wig!
+          </p>
+          <Link href="https://chat.whatsapp.com/DDnAECjh1mgBF7KJnm0njO">
+            Entrar para o grupo vip
+          </Link>
         </div>
       </Content>
     </Container>
