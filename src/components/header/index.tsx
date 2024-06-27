@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import heroVideoDesktop from "../../assets/hero-desktop.mov";
-import heroVideoMobile from "../../assets/hero-mobile.mov";
+import HeroVideo from "./hero-video";
 
 const Container = styled.header`
   width: min(100%, ${(props) => props.theme.devices.extra_large_screen});
@@ -8,14 +7,6 @@ const Container = styled.header`
   max-height: 800px;
   position: relative;
   margin: 0 auto;
-
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: 1;
-  }
 
   & > .overlay {
     width: 100%;
@@ -98,18 +89,7 @@ export default function Header() {
   return (
     <Container>
       <div className="overlay"></div>
-      <video autoPlay muted loop playsInline>
-        <source
-          src={heroVideoDesktop}
-          type="video/mp4"
-          media="only screen and (min-width: 600px)"
-        />
-        <source
-          src={heroVideoMobile}
-          type="video/mp4"
-          media="only screen and (max-width: 600px)"
-        />
-      </video>
+      <HeroVideo />
       <Content>
         <div className="overlay">
           {isMobile ? (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import tutorImg from "../../assets/tutor.png";
+import TutorImage from "./tutor-image";
 
 const Container = styled.section`
   background-color: ${(props) => props.theme.colors.background};
@@ -44,13 +44,6 @@ const TextContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
-`;
-
 export default function Info() {
   return (
     <Container>
@@ -68,9 +61,7 @@ export default function Info() {
             penteados, deixando um acabamento elegante e os fios bem alinhados!
           </p>
         </TextContainer>
-        <ImageContainer>
-          <img src={tutorImg} alt="Professora Samyra" />
-        </ImageContainer>
+        <TutorImage />
       </div>
     </Container>
   );
